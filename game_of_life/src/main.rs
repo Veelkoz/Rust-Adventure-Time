@@ -5,7 +5,7 @@ use std::{thread, time};
 
 #[macroquad::main("Game of Life")]
 async fn main() {
-    const SIZE: usize = 64;
+    const SIZE: usize = 256;
 
     println!("How many starting lifes do you want?");
 
@@ -70,7 +70,7 @@ async fn main() {
         }
 
         game_board_1 = game_board_2;
-        thread::sleep(time::Duration::from_millis(100));
+        thread::sleep(time::Duration::from_millis(50));
         next_frame().await;
 
     }
